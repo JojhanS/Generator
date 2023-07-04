@@ -6,15 +6,31 @@ const fs = require('fs')
 const questions = [
     {
         type: 'input',
-        message: 'What is your github username',
-        name: 'github',
+        message: 'Enter up to 3 characters',
+        name: 'characters',
         validate: function(answer) {
-            if (answer.length < 1) {
+            if (answer.length > 3) {
                 return console.log("Response Needed")
             }
             return true
         }
     },
+    {
+        type: 'input',
+        message: 'Input color of text (color name or hexadecimal)',
+        name: 'textColor',
+    },
+    {
+        type: 'list',
+        message: 'Choose logo shape',
+        choices: ['circle', 'square', 'triangle'],
+        name: 'shape',
+    },
+    {
+        type: 'input',
+        message: 'Input color of shape',
+        name: 'shapeColor',
+    }
 ,];
 
 function init() {
