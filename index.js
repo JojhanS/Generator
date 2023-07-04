@@ -10,7 +10,7 @@ const questions = [
         name: 'characters',
         validate: function(answer) {
             if (answer.length > 3) {
-                return console.log("Response Needed")
+                return console.log("Response needs to be 3 characters or less")
             }
             return true
         }
@@ -33,8 +33,14 @@ const questions = [
     }
 ,];
 
+function generateLogo(answers){
+    const {characters, textColor, shape, shapeColor} = answers;
+}
+
 function init() {
     inquirer.prompt(questions).then((answers) => {
+        generateLogo(answers)
+
     });
   }
 // Function call to initialize app
