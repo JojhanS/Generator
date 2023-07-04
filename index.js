@@ -17,7 +17,10 @@ const questions = [
     },
 ,];
 
-
-
+function init() {
+    inquirer.prompt(questions).then((answers) => {
+    });
+  }
 // Function call to initialize app
-console.log(1)
+init();
+
